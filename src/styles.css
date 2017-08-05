@@ -1,0 +1,92 @@
+.result-list {
+  align-items: center;
+  /* In lieu of a fancy grid algorithm a la Google Images, this fake gray box gives the effect of evenly filled rows - not pretty but a stopgap */
+  background-image: url('data:image/svg+xml;utf8,<svg width="100" height="162" version="1.1" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="6" width="100" height="150" fill="#444"/></svg>');
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 10px 16px;
+}
+.result-item {
+  cursor: pointer;
+  margin: 6px;
+  position: relative;
+}
+.result-item, .item-image {
+  height: 150px;
+}
+.item-margin {
+  background-color: #fff;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 12px;
+}
+.item-margin-left {
+  left: -12px;
+}
+.item-margin-right {
+  right: -12px;
+}
+.lightbox {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: none;
+  height: 100%;
+  justify-content: space-between;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.lightbox--visible {
+  display: flex;
+}
+.lightbox-close {
+  color: #ccc;
+  cursor: pointer;
+  font-size: 50px;
+  height: 50px;
+  line-height: 50px;
+  position: absolute;
+  right: 20px;
+  text-align: center;
+  top: 20px;
+  width: 50px;
+}
+.lightbox-close:before {
+  content: '×';
+}
+.lightbox-left, .lightbox-right {
+  color: #ccc;
+  cursor: pointer;
+  flex: 1;
+  font-size: 50px;
+  height: 100%;
+  line-height: 100vh;
+  text-align: center;
+}
+.lightbox-left:before {
+  content: '❬';
+}
+.lightbox-right:before {
+  content: '❭';
+}
+.lightbox-:hover, .lightbox-left:hover, .lightbox-right:hover {
+  color: #fff;
+}
+.lightbox-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  flex-basis: 80%;
+  height: 80%;
+}
+.lightbox-caption {
+  bottom: 5%;
+  color: #fff;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
