@@ -72,7 +72,7 @@
 .lightbox-right:before {
   content: '❭';
 }
-.lightbox-:hover, .lightbox-left:hover, .lightbox-right:hover {
+.lightbox-close:hover, .lightbox-left:hover, .lightbox-right:hover {
   color: #fff;
 }
 .lightbox-image {
