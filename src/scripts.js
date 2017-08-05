@@ -12,7 +12,7 @@
   const fetchJson = (url) => fetch(url).then(res => res.json())
 
   const fetchGiphySearch = (query, offset, limit) => fetchJson(
-    `http://api.giphy.com/v1/gifs/search?`
+    `https://api.giphy.com/v1/gifs/search?`
     + `api_key=${GIPHY_API_KEY}`
     + `&q=${encodeURIComponent(query)}`
     + `&offset=${offset}`
