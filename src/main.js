@@ -35,8 +35,8 @@
   const $lightboxImage = document.querySelector('.lightbox-image')
   const $lightboxCaption = document.querySelector('.lightbox-caption')
 
-  const search = (query, isUpdate = false, cb) => {
-    fetchGiphySearch(query, results.length, isUpdate ? IMAGE_COUNT_UPDATE : IMAGE_COUNT_INITIAL)
+  const search = (query, isUpdate = false) => {
+    return fetchGiphySearch(query, results.length, isUpdate ? IMAGE_COUNT_UPDATE : IMAGE_COUNT_INITIAL)
       .then(res => {
         const data = res.data
 
@@ -49,8 +49,6 @@
           $resultList.append(...data.map((item, i) => buildResult(item, results.length + i)))
           results.push(...data)
         }
-
-        if (cb) cb()
       })
   }
 
@@ -98,7 +96,7 @@
       requestAnimationFrame(() => {
         if (!pauseInfiniteScroll && scrollY > scrollHeight - window.innerHeight - SCROLL_BOTTOM_MIN) {
           pauseInfiniteScroll = true
-          search('sponge bob', true, () => {
+          search('sponge bob', true).then(() => {
             pauseInfiniteScroll = false
           })
         }
