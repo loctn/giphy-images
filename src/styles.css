@@ -1,7 +1,7 @@
 .result-list {
   align-items: center;
   /* In lieu of a fancy grid algorithm a la Google Images, this fake gray box gives the effect of evenly filled rows - not pretty but a stopgap */
-  background-image: url('data:image/svg+xml;utf8,<svg width="100" height="162" version="1.1" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="6" width="100" height="150" fill="#444"/></svg>');
+  background-image: url('data:image/svg+xml;utf8,%3Csvg%20width%3D%22100%22%20height%3D%22162%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Crect%20x%3D%220%22%20y%3D%226%22%20width%3D%22100%22%20height%3D%22150%22%20fill%3D%22%23444%22%2F%3E%3C%2Fsvg%3E');
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
