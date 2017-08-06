@@ -25,8 +25,6 @@
 
     const image = item.images.fixed_height_still
     div.innerHTML = `
-      <div class="item-margin item-margin-left"></div>
-      <div class="item-margin item-margin-right"></div>
       <img src="${image.url}" class="item-image" data-index="${index}" />
     `
 
