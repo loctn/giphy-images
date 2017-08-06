@@ -7,10 +7,9 @@
 }
 .result-item {
   cursor: pointer;
-  margin: 6px;
-}
-.result-item, .item-image {
+  display: block;
   height: 150px;
+  margin: 6px;
 }
 .lightbox {
   align-items: center;

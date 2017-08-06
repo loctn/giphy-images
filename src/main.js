@@ -20,15 +20,14 @@
   )
 
   const buildResult = (item, index) => {
-    const div = document.createElement('div')
-    div.classList.add('result-item')
+    const img = document.createElement('img')
+    img.classList.add('result-item')
 
     const image = item.images.fixed_height_still
-    div.innerHTML = `
-      <img src="${image.url}" class="item-image" data-index="${index}" />
-    `
+    img.src = image.url
+    img.dataset.index = index
 
-    return div
+    return img
   }  
 
   const $resultList = document.querySelector('.result-list')
@@ -65,7 +64,7 @@
   document.addEventListener('click', event => {
     const classList = event.target.classList
 
-    if (classList.contains('item-image')) {
+    if (classList.contains('result-item')) {
       $lightbox.classList.add('lightbox--visible')
       navigateLightbox(event.target.dataset.index)
     } else if (classList.contains('lightbox-close')) {
